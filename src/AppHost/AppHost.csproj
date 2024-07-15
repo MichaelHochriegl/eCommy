@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <IsAspireHost>true</IsAspireHost>
+        <UserSecretsId>337dde57-1b10-469d-a9a9-ef91416cdc05</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Aspire.Hosting.AppHost" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\services\CatalogManagement\CatalogManagement.Api\CatalogManagement.Api.csproj" />
+    </ItemGroup>
+
+</Project>

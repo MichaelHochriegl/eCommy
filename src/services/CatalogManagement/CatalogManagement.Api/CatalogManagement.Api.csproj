@@ -2,4 +2,7 @@
   <ItemGroup>
     <PackageReference Include="FastEndpoints.Swagger" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ServiceDefaults\ServiceDefaults.csproj" />
+  </ItemGroup>
 </Project>
