@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CatalogManagement", "Catalo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogManagement.Api", "src\services\CatalogManagement\CatalogManagement.Api\CatalogManagement.Api.csproj", "{127908F5-EDDD-4255-90AD-28CE4EE49452}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogManagement.Persistence", "src\services\CatalogManagement\CatalogManagement.Persistence\CatalogManagement.Persistence.csproj", "{D6A901EF-D07B-4B02-A767-A4164780AFC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{691AC2D9-927D-451F-B470-D0943EBE0687} = {06328DBE-048C-4E0C-9294-D569A4228ADE}
 		{69A69F36-841F-4660-B9C5-277B296B3A94} = {691AC2D9-927D-451F-B470-D0943EBE0687}
 		{127908F5-EDDD-4255-90AD-28CE4EE49452} = {69A69F36-841F-4660-B9C5-277B296B3A94}
+		{D6A901EF-D07B-4B02-A767-A4164780AFC3} = {69A69F36-841F-4660-B9C5-277B296B3A94}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{127908F5-EDDD-4255-90AD-28CE4EE49452}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{127908F5-EDDD-4255-90AD-28CE4EE49452}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{127908F5-EDDD-4255-90AD-28CE4EE49452}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{127908F5-EDDD-4255-90AD-28CE4EE49452}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A901EF-D07B-4B02-A767-A4164780AFC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A901EF-D07B-4B02-A767-A4164780AFC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A901EF-D07B-4B02-A767-A4164780AFC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A901EF-D07B-4B02-A767-A4164780AFC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
