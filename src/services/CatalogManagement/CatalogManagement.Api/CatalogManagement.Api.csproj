@@ -4,5 +4,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\ServiceDefaults\ServiceDefaults.csproj" />
+    <ProjectReference Include="..\CatalogManagement.Contracts\CatalogManagement.Contracts.csproj" />
+    <ProjectReference Include="..\CatalogManagement.Persistence\CatalogManagement.Persistence.csproj" />
   </ItemGroup>
 </Project>
