@@ -23,10 +23,10 @@ public class CatalogItem
     public required uint AvailableStock { get; set; }
 
     public Guid CatalogBrandId { get; set; }
-    public CatalogBrand Brand { get; set; }
+    public required CatalogBrand Brand { get; set; }
 
     public Guid CatalogTypeId { get; set; }
-    public CatalogType Type { get; set; }
+    public required CatalogType Type { get; set; }
 }
 
 internal class CatalogItemEntityTypeConfiguration : IEntityTypeConfiguration<CatalogItem>
