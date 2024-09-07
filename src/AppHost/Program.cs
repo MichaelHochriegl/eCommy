@@ -10,6 +10,9 @@ var postgresServer = builder.AddPostgres(ServiceDescriptors.CatalogManagementDbS
 var postgresDb = postgresServer.AddDatabase(ServiceDescriptors.CatalogManagementDb);
 postgresServer.WithDataVolume(ServiceDescriptors.CatalogManagementDbVolume);
 
+builder.AddProject<Projects.CatalogManagement_Migrator>(ServiceDescriptors.CatalogManagementMigrator)
+    .WithReference(postgresDb);
+
 builder.AddProject<Projects.CatalogManagement_Api>(ServiceDescriptors.CatalogManagementApi)
     .WithReference(postgresDb);
 

@@ -14,6 +14,7 @@
     <ItemGroup>
       <ProjectReference Include="..\ServiceDefaults\ServiceDefaults.csproj" IsAspireProjectResource="false"/>
       <ProjectReference Include="..\services\CatalogManagement\CatalogManagement.Api\CatalogManagement.Api.csproj" />
+      <ProjectReference Include="..\services\CatalogManagement\CatalogManagement.Migrator\CatalogManagement.Migrator.csproj" />
     </ItemGroup>
 
 </Project>

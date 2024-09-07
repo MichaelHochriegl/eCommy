@@ -5,5 +5,6 @@ public static class ServiceDescriptors
     public const string CatalogManagementDbServer = "catalog-management-db-server";
     public const string CatalogManagementDbVolume = "catalog-management-db-volume";
     public const string CatalogManagementDb = "catalog-management-db";
+    public const string CatalogManagementMigrator = "catalog-management-migrator";
     public const string CatalogManagementApi = "catalog-management-api";
 }
