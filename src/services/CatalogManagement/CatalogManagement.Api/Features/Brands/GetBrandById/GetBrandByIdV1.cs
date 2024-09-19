@@ -2,13 +2,13 @@ using CatalogManagement.Contracts.Features.Brands;
 using CatalogManagement.Persistence;
 using FastEndpoints;
 
-namespace CatalogManagement.Api.Features.Brands;
+namespace CatalogManagement.Api.Features.Brands.GetBrandById;
 
-public class GetBrandByIdEndpoint : Endpoint<GetBrandByIdRequest, GetBrandByIdResponse>
+public class GetBrandByIdV1Endpoint : Endpoint<GetBrandByIdRequest, GetBrandByIdResponse>
 {
     private readonly CatalogManagementDbContext _dbContext;
 
-    public GetBrandByIdEndpoint(CatalogManagementDbContext dbContext)
+    public GetBrandByIdV1Endpoint(CatalogManagementDbContext dbContext)
     {
         _dbContext = dbContext;
     }

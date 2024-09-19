@@ -1,16 +1,17 @@
+using CatalogManagement.Api.Features.Brands.GetBrandById;
 using CatalogManagement.Contracts.Features.Brands;
 using CatalogManagement.Persistence;
 using CatalogManagement.Persistence.Entities;
 using FastEndpoints;
 using Microsoft.EntityFrameworkCore;
 
-namespace CatalogManagement.Api.Features.Brands;
+namespace CatalogManagement.Api.Features.Brands.CreateBrand;
 
-public class CreateBrandEndpoint : Endpoint<CreateBrandRequest, CreateBrandResponse>
+public class CreateBrandV1Endpoint : Endpoint<CreateBrandRequest, CreateBrandResponse>
 {
     private readonly CatalogManagementDbContext _dbContext;
 
-    public CreateBrandEndpoint(CatalogManagementDbContext dbContext)
+    public CreateBrandV1Endpoint(CatalogManagementDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -18,6 +19,7 @@ public class CreateBrandEndpoint : Endpoint<CreateBrandRequest, CreateBrandRespo
     public override void Configure()
     {
         Post("/brands");
+        Version(1);
     }
 
     public override async Task HandleAsync(CreateBrandRequest req, CancellationToken ct)
@@ -36,6 +38,6 @@ public class CreateBrandEndpoint : Endpoint<CreateBrandRequest, CreateBrandRespo
         await _dbContext.SaveChangesAsync(ct);
 
         var response = new CreateBrandResponse(brand.Id, brand.BrandName);
-        await SendCreatedAtAsync<GetBrandByIdEndpoint>(new { brand.Id}, response, cancellation: ct);
+        await SendCreatedAtAsync<GetBrandByIdV1Endpoint>(new { brand.Id}, response, cancellation: ct);
     }
 }
