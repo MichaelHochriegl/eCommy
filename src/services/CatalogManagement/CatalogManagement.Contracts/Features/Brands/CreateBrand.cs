@@ -1,5 +1,5 @@
 namespace CatalogManagement.Contracts.Features.Brands;
 
-public record CreateBrandRequest(string BrandName);
+public record CreateBrandRequestV1(string BrandName);
 
-public record CreateBrandResponse(Guid Id, string BrandName);
+public record CreateBrandResponseV1(Guid Id, string BrandName);

@@ -4,11 +4,11 @@ using FastEndpoints;
 
 namespace CatalogManagement.Api.Features.Brands.GetBrandById;
 
-public class GetBrandByIdV1Endpoint : Endpoint<GetBrandByIdRequest, GetBrandByIdResponse>
+public class GetBrandByIdEndpointV1 : Endpoint<GetBrandByIdRequestV1, GetBrandByIdResponseV1>
 {
     private readonly CatalogManagementDbContext _dbContext;
 
-    public GetBrandByIdV1Endpoint(CatalogManagementDbContext dbContext)
+    public GetBrandByIdEndpointV1(CatalogManagementDbContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -18,7 +18,7 @@ public class GetBrandByIdV1Endpoint : Endpoint<GetBrandByIdRequest, GetBrandById
         Get("brands/{id}");
     }
 
-    public override async Task HandleAsync(GetBrandByIdRequest req, CancellationToken ct)
+    public override async Task HandleAsync(GetBrandByIdRequestV1 req, CancellationToken ct)
     {
         var brand = await _dbContext.CatalogBrands.FindAsync([req.Id], cancellationToken: ct);
         if (brand is null)
@@ -27,7 +27,7 @@ public class GetBrandByIdV1Endpoint : Endpoint<GetBrandByIdRequest, GetBrandById
             return;
         }
 
-        var response = new GetBrandByIdResponse(brand.Id, brand.BrandName);
+        var response = new GetBrandByIdResponseV1(brand.Id, brand.BrandName);
         await SendOkAsync(response, ct);
     }
 }
